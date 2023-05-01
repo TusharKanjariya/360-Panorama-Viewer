@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Panorama Example</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #panorama-container {
+            position: relative;
+            width: 1440px;
+            height: 650px;
+            margin: 0 auto;
+            overflow: hidden;
+            cursor: move;
+            /* fallback if grab cursor is unsupported */
+            cursor: grab;
+            cursor: -moz-grab;
+            cursor: -webkit-grab;
+        }
+
+        #panorama-container:active {
+            cursor: grabbing;
+            cursor: -moz-grabbing;
+            cursor: -webkit-grabbing;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="panorama-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="panorama.js"></script>
+</body>
+
+</html>
